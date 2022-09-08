@@ -1,61 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Fira+Sans:wght@200&family=Nunito:wght@300&family=Raleway:wght@100&family=Source+Code+Pro:wght@200&family=Tiro+Devanagari+Sanskrit&display=swap');
+
+
 *{
-    box-sizing: border-box;
-    margin: 0;
     padding: 0;
-}
-body{
-    background-color: #fbfbfb;
-   
-}
-.container{
     margin: 0;
-    padding: 0;
-    
-}
-
-.top {
-    
-    /* background-color: aqua; */
-    color: rgb(8, 7, 7);
-    display: flex;
-    justify-content: right;
     text-decoration: none;
-    /*  */
-    margin-bottom: 10px;
-    /* top: 0; */
- 
-}
-
-
-.top ul {
-    display: flex;
     list-style: none;
-    /* text-decoration: none; */
-    justify-content: space-between;
-    gap: 15px;
-    margin: 20px;
-    height: 20vh;
-}
-.top  li a{
-    display: inline;
-    list-style-type: none;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Baloo Bhaijaan 2', cursive;
+
+  }
+  nav{
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
     font-weight: bold;
-    margin: 5px 10px;
-    /* padding: 0 20px; */
-    
-}
-.logo img{
-    position: absolute;
-    /* color: white; */
-    top: 0px;
-    left: 0px;
-    width: 10vw;
-    
-    
-}
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+  
+   
+  section{
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+  }
 span{
     color: rgb(197, 6, 139);
 }
@@ -299,14 +307,42 @@ align-items: center;
     justify-content: center;
     
 }
-@media screen and (max-width:1500px){
-
-    body{
-        background-color: aqua;
+@media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
     }
-    .top li a{
-        display: block;
-        justify-content: center;
-        align-items: center;
+    nav ul li a{
+      font-size: 16px;
     }
-}
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+      }
+      a:hover,a.active{
+        background: none;
+        color: #0082e6;
+      }
+      #check:checked ~ ul{
+        left: 0;
+      }
+    }
