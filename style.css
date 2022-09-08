@@ -299,3 +299,14 @@ align-items: center;
     justify-content: center;
     
 }
+@media screen and (max-width:600px){
+
+    body{
+        background-color: aqua;
+    }
+    .top li a{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+}
